@@ -41,7 +41,7 @@ for (s in 0:51){ # States loop
   j<-1
   k<-1
   
-  for(i in 1:length(fid)) {
+  for(i in 1:length(fid)) { # county loop
     
     countymsk <- subset(countyData,GEOID==fid[i])
     sD_crp    <- crop(soilData,countymsk) 
