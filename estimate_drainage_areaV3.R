@@ -1,3 +1,9 @@
+# This R code is can be used for estimating gridded 30-m 
+# tile drainage area from USDA county level tile drainage census data.
+# Main inputs are county-level census, SSURGO gridded soil drainage data,
+# NLCD cropland mask, and SRTM DEM derived slope.
+# Any question?, please contact prasanth@ucar.edu
+#---------------------------
 rm(list=ls())
 library(raster)
 
@@ -14,7 +20,7 @@ fc<-list.files("./census/split/",pattern = ".shp")
 
 s<-0
 
-for (s in 0:11){
+for (s in 0:51){ # States loop
   countyData   <-shapefile(paste("./census/split/",s+1,".shp",sep="")) 
   soilData     <-raster(paste("./soil/split/soil",s,".TIF",sep=""),RAT = TRUE)
   lan_covr     <-raster(paste("E:/DRAINAGE/CDL/split/crop",s,".TIF",sep=""))
