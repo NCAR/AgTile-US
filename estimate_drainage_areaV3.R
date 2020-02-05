@@ -1,4 +1,4 @@
-# This R code is can be used for estimating gridded 30-m 
+# This R code can be used for estimating gridded 30-m 
 # tile drainage area from USDA county level tile drainage census data.
 # Main inputs are county-level census, SSURGO gridded soil drainage data,
 # NLCD cropland mask, and SRTM DEM derived slope.
